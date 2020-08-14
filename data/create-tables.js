@@ -21,7 +21,7 @@ async function run() {
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     winner BOOLEAN NOT NULL,
-                    missCongeniality BOOLEAN NOT NULL,
+                    miss_congeniality BOOLEAN NOT NULL,
                     quote VARCHAR(600)
             );
         `);
