@@ -31,7 +31,7 @@ async function run() {
                     INSERT INTO queens (name, winner, miss_congeniality, quote)
                     VALUES ($1, $2, $3, $4);
                 `,
-        [queen.name, queen.winner, queen.missCongeniality, queen.quote]);
+        [queen.name, queen.winner, queen.miss_congeniality, queen.quote]);
       })
     );
     
