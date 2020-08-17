@@ -20,9 +20,11 @@ async function run() {
                 CREATE TABLE queens (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
+                    image_url VARCHAR(600) NOT NULL,
                     winner BOOLEAN NOT NULL,
                     miss_congeniality BOOLEAN NOT NULL,
-                    quote VARCHAR(600)
+                    quote VARCHAR(600),
+                    
             );
         `);
 
