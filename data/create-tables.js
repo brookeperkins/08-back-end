@@ -23,7 +23,7 @@ async function run() {
                     image_url VARCHAR(600) NOT NULL,
                     winner BOOLEAN NOT NULL,
                     miss_congeniality BOOLEAN NOT NULL,
-                    quote VARCHAR(600),
+                    quote VARCHAR(600)
                     
             );
         `);

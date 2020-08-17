@@ -28,10 +28,10 @@ async function run() {
       queens.map(queen => {
         console.log(queen);
         return client.query(`
-                    INSERT INTO queens (name, winner, miss_congeniality, quote)
-                    VALUES ($1, $2, $3, $4);
+                    INSERT INTO queens (name, winner, miss_congeniality, quote, image_url)
+                    VALUES ($1, $2, $3, $4, $5);
                 `,
-        [queen.name, queen.winner, queen.miss_congeniality, queen.quote]);
+        [queen.name, queen.winner, queen.miss_congeniality, queen.quote, queen.image_url]);
       })
     );
     
