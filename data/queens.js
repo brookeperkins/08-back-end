@@ -30,7 +30,7 @@ module.exports = [
   {
     id: 148,
     name: 'Nina West',
-    winner: 'She\'s Miss Congeniality!'
+    winner: 'She\'s Miss Congeniality!',
     quote: 'Welcome to Season 11. It looks like things just got... elevengendary.',
     image_url: 'https://www.nokeynoshade.party/images/nina-west.jpg',
   },
