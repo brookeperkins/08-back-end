@@ -12,19 +12,23 @@ async function run() {
 
     // run a query to create tables
     await client.query(`  
-                CREATE TABLE users (
+                 CREATE TABLE users (
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
-                );         
+                );
+                CREATE TABLE winners (
+                    id SERIAL PRIMARY KEY NOT NULL,
+                    name VARCHAR(256) NOT NULL,
+                );      
                 CREATE TABLE queens (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     image_url VARCHAR(600) NOT NULL,
                     winner BOOLEAN NOT NULL,
                     miss_congeniality BOOLEAN NOT NULL,
-                    quote VARCHAR(600)
-                    
+                    quote VARCHAR(600),   
+                    owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
 
