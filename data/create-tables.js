@@ -25,8 +25,7 @@ async function run() {
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     image_url VARCHAR(600) NOT NULL,
-                    winner BOOLEAN NOT NULL,
-                    miss_congeniality BOOLEAN NOT NULL,
+                    winner VARCHAR(600) NOT NULL,
                     quote VARCHAR(600),   
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
