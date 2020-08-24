@@ -1,12 +1,12 @@
 // SEED data
 module.exports = [
   {
-    Winner: 'She wins it all!'
+    winner_type: 'Crowned Queen'
   },
   {
-    Winner: 'She\'s Miss Congeniality!'
+    winner_type: 'Miss Congeniality'
   },
   {
-    Winner: 'Participation trophy?'
+    winner_type: 'Loser'
   }
 ];

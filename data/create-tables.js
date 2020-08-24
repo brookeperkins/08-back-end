@@ -18,16 +18,16 @@ async function run() {
                     hash VARCHAR(512) NOT NULL
                 );
                 CREATE TABLE winners (
-                    id SERIAL PRIMARY KEY NOT NULL,
-                    name VARCHAR(256) NOT NULL,
+                    id SERIAL PRIMARY KEY,
+                    winner_type VARCHAR(256) NOT NULL,
                 );      
                 CREATE TABLE queens (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     image_url VARCHAR(600) NOT NULL,
-                    winner VARCHAR(600) NOT NULL,
                     quote VARCHAR(600),   
-                    owner_id INTEGER NOT NULL REFERENCES users(id)
+                    owner_id INTEGER NOT NULL REFERENCES users(id),
+                    winner_id INTEGER NOT NULL REFERENCES winners(id)
             );
         `);
 

@@ -28,7 +28,7 @@ async function run() {
     await Promise.all(
       winnerData.map(winner => {
         return client.query(`
-                      INSERT INTO winner (winner)
+                      INSERT INTO winners (winner_type)
                       VALUES ($1);
                   `,
         [winner.winner]);
