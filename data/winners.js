@@ -7,6 +7,6 @@ module.exports = [
     winner_type: 'Miss Congeniality'
   },
   {
-    winner_type: 'Loser'
+    winner_type: 'Participation Trophy'
   }
 ];
