@@ -11,21 +11,21 @@ async function run() {
     await client.connect();
 
     // run a query to create tables
-    await client.query(`  
-                 CREATE TABLE users (
+    await client.query(`
+                CREATE TABLE users (
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
                 );
                 CREATE TABLE winners (
-                    id SERIAL PRIMARY KEY,
-                    winner_type VARCHAR(256) NOT NULL,
-                );      
+                  id SERIAL PRIMARY KEY NOT NULL,
+                  winner_type VARCHAR(256) NOT NULL
+                );
                 CREATE TABLE queens (
                     id SERIAL PRIMARY KEY NOT NULL,
-                    name VARCHAR(512) NOT NULL,
-                    image_url VARCHAR(600) NOT NULL,
-                    quote VARCHAR(600),   
+                    name VARCHAR(256) NOT NULL,
+                    image_url VARCHAR(256) NOT NULL,
+                    quote VARCHAR(256) NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id),
                     winner_id INTEGER NOT NULL REFERENCES winners(id)
             );
