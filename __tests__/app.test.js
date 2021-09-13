@@ -22,29 +22,17 @@ describe('app routes', () => {
 
   test('returns queens', async() => {
 
-    const expectation = [
+    const expectation = 
       {
         'id': 1,
-        'name': 'bessie',
-        'coolfactor': 3,
-        'owner_id': 1
-      },
-      {
-        'id': 2,
-        'name': 'jumpy',
-        'coolfactor': 4,
-        'owner_id': 1
-      },
-      {
-        'id': 3,
-        'name': 'spot',
-        'coolfactor': 10,
-        'owner_id': 1
-      }
-    ];
+        'miss_congeniality': false,
+        'name': 'Ongina',
+        'quote': 'If I don\'t win this, I swear to god I\'m gonna cut someone!',
+        'winner': false,
+      };
 
     const data = await fakeRequest(app)
-      .get('/queens')
+      .get('/queens/1')
       .expect('Content-Type', /json/)
       .expect(200);
 
